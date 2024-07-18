@@ -1,0 +1,6 @@
+@MoviesDbDotNetAngular.Server_HostAddress = http://localhost:5185
+
+GET {{MoviesDbDotNetAngular.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

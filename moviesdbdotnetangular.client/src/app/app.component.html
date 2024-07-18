@@ -1,0 +1,25 @@
+<h1 id="tableLabel">Imdb collection</h1>
+
+<p *ngIf="!entityList"><em>Loading... Please refresh once the backend has started.</em></p>
+
+<table *ngIf="entityList">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>IMDb Id</th>
+            <th>Title</th>
+            <th>Extra</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entity of entityList">
+        <td><img src="{{ entity.imageUrl }}" class="imageStyle" /></td>
+        <td>{{ entity.imdbId }}</td>
+        <td>{{ entity.title }}</td>
+        <td>
+          {{ entity.favorite }}
+          {{ entity.watch }}
+        </td>
+      </tr>
+    </tbody>
+</table>
